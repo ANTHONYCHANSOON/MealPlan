@@ -1,0 +1,23 @@
+{
+  "name": "mealplan",
+  "version": "1.0.0",
+  "description": "Our Daily Meal Plan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANTHONYCHANSOON/MealPlan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANTHONYCHANSOON/MealPlan/issues"
+  },
+  "homepage": "https://github.com/ANTHONYCHANSOON/MealPlan#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
