@@ -1,5 +1,4 @@
 const mysql = require('mysql');
-
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -13,25 +12,51 @@ if (process.env.JAWSDB_URL) {
     })
 }
 
-let tabledata = {};
-
-tabledata.all = () => {
-    return new Promise((resolve, reject) => {
-        connection.query("select * from meal", (err, results) => {
-            if (err) {
-                return reject(err)
-            };
-            return resolve(results)
-        })
-    })
-}
-
-connection.connect(function (err) {
-    if (err) {
+connection.connect(function(err) {
+    if(err) {
         console.error("error connecting " + err.stack);
         return;
     }
     console.log("connected as id " + connection.threadId);
-});
+})
 
 module.exports = connection;
+
+// let mealinfo = {};
+
+// mealinfo.all = () => {
+//     return new Promise((resolve,reject) => {
+//         connection.require("select * from meal", (err, results) => {
+//             if (err) {
+//                 return reject(err);
+//             }
+//             return resolve(results);
+//         })
+//     })
+// }
+
+// module.exports = mealinfo;
+
+// connection.connect(function (err) {
+//     if (err) {
+//         console.error("error connecting " + err.stack);
+//         return;
+//     }
+//     console.log("connected as id " + connection.threadId);
+// });
+
+// module.exports = connection;
+
+
+// let tabledata = {};
+
+// tabledata.all = () => {
+//     return new Promise((resolve, reject) => {
+//         connection.query("select * from meal", (err, results) => {
+//             if (err) {
+//                 return reject(err)
+//             };
+//             return resolve(results)
+//         })
+//     })
+// }
