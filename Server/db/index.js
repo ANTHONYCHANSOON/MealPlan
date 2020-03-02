@@ -38,6 +38,12 @@ mealdb.one = (id) => {
     })
 }
 
+mealdb.update = (id) => {
+    return new Promise((resolve,reject) => {
+        connection.query("UPDATE meal set DRINK = ??, BREAKFAST = ??, DINNER_1 = ??, DINNER_2 = ?? WHERE ID = ??", [])
+    })
+}
+
 module.exports = mealdb;
 
 // const mysql = require('mysql');
