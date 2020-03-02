@@ -24,6 +24,12 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
+router.put("/update/:id", function (req,res) {
+    let primarykey = req.params.id;
+    let results = db.update(primarykey);
+    res.json(results);
+})
+
 module.exports = router
 
 // // var express = require("express");
